@@ -1,0 +1,70 @@
+/* Page background */
+body{
+    background: linear-gradient(135deg, #ede9fe, #e0c3fc);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container */
+.container{
+    width: 85%;
+    margin: 50px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Heading */
+.container h2{
+    margin-bottom: 25px;
+    color: #5b21b6;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+/* Table */
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Header */
+table th{
+    padding: 14px;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg,#7c3aed,#a78bfa);
+}
+
+/* Table cells */
+table td{
+    padding: 12px;
+    font-size: 15px;
+    color: #444;
+}
+
+/* Row colors */
+table tr:nth-child(odd){
+    background-color: #f5f3ff;
+}
+
+table tr:nth-child(even){
+    background-color: #ede9fe;
+}
+
+/* Hover effect */
+table tr:hover{
+    background: linear-gradient(90deg,#c4b5fd,#e9d5ff);
+    transform: scale(1.01);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* Borders */
+table td, table th{
+    border-bottom: 1px solid #ddd;
+}
