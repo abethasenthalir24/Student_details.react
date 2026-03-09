@@ -4,7 +4,7 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Container */
+/* Main container */
 .container{
     width: 85%;
     margin: 50px auto;
@@ -12,7 +12,6 @@ body{
     background: #ffffff;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    text-align: center;
 }
 
 /* Heading */
@@ -21,9 +20,76 @@ body{
     color: #5b21b6;
     font-size: 30px;
     letter-spacing: 1px;
+    text-align: center;
 }
 
-/* Table */
+/* Buttons */
+button{
+    padding: 8px 14px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    background: linear-gradient(90deg,#7c3aed,#a78bfa);
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover{
+    transform: scale(1.05);
+}
+
+/* SEARCH BAR */
+.searchBox{
+    width: 60%;
+    padding: 10px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid #c4b5fd;
+}
+
+/* GRID LAYOUT (3 Columns) */
+.gridContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* STUDENT CARD */
+.studentCard{
+    background: #f5f3ff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+
+    /* Added border and outline */
+    border: 2px solid #c4b5fd;
+    outline: 1px solid #a78bfa;
+}
+
+/* Hover Effect */
+.studentCard:hover{
+    transform: translateY(-5px);
+    background: #ede9fe;
+    border-color: #7c3aed;
+}
+
+.studentCard h3{
+    color: #6d28d9;
+    margin-bottom: 10px;
+}
+
+.studentCard p{
+    margin: 5px 0;
+    color: #444;
+}
+
+/* TABLE VIEW */
 table{
     width: 100%;
     border-collapse: collapse;
@@ -31,7 +97,7 @@ table{
     overflow: hidden;
 }
 
-/* Header */
+/* Table Header */
 table th{
     padding: 14px;
     color: white;
@@ -40,7 +106,7 @@ table th{
     background: linear-gradient(90deg,#7c3aed,#a78bfa);
 }
 
-/* Table cells */
+/* Table Cells */
 table td{
     padding: 12px;
     font-size: 15px;
@@ -56,12 +122,11 @@ table tr:nth-child(even){
     background-color: #ede9fe;
 }
 
-/* Hover effect */
+/* Hover */
 table tr:hover{
     background: linear-gradient(90deg,#c4b5fd,#e9d5ff);
     transform: scale(1.01);
     transition: 0.3s;
-    cursor: pointer;
 }
 
 /* Borders */

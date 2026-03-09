@@ -1,33 +1,68 @@
-import Studentgrid from "./Student_details/Studentgrid";
-import data from './data/Student_details.json'
 import { useState } from "react";
-import Student from "./Student_details/Student";
-export default function App() {
-  const [view, setView] = useState('grid')
-  const [search, setSearch] = useState('')
-  const [filteredData, setFilteredData] = useState(data)
-  const handleNameChange = (e) => {
-    setSearch(e.target.value)
-    setFilteredData(
-      data.filter(
-        (val) => val.name.toLowerCase().includes(e.target.value)
-      )
-    )
-  }
+import "./Regform.css";
+
+export default function Regform() {
+
+  const [name, setName] = useState("");
+  const [course, setCourse] = useState("");
+  const [regno, setRegno] = useState("");
+  const [duration, setDuration] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const student = {
+      name,
+      course,
+      regno,
+      duration
+    };
+
+    console.log(student);
+
+    // Clear form after submit
+    setName("");
+    setCourse("");
+    setRegno("");
+    setDuration("");
+  };
+
   return (
-    <div>
-      <form>
-        <input
-          type="text"
-          placeholder="search by name"
-          onChange={handleNameChange}
-          name={search}
-        />
-      </form>
-      <button onClick={() => { setView("grid") }}>grid</button>
-      <button onClick={() => { setView("table") }}>table</button>
-      {view === "grid" && <Studentgrid data={filteredData} />}
-      {view === "table" && <Student data={filteredData} />}
-    </div>
-  )
+    <form onSubmit={handleSubmit}>
+
+      <h2>Student Registration</h2>
+
+      <input
+        type="text"
+        placeholder="Student Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+
+      <input
+        type="text"
+        placeholder="Course"
+        value={course}
+        onChange={(e) => setCourse(e.target.value)}
+      />
+
+      <input
+        type="text"
+        placeholder="Register Number"
+        value={regno}
+        onChange={(e) => setRegno(e.target.value)}
+      />
+
+      <input
+        type="text"
+        placeholder="Duration"
+        value={duration}
+        onChange={(e) => setDuration(e.target.value)}
+      />
+
+     <button type="submit">Submit</button>
+
+
+    </form>
+  );
 }

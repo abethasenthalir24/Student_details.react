@@ -2,6 +2,8 @@ import Studentgrid from "./Components/Studentgrid";
 import data from './data/Student_details.json'
 import { useState } from "react";
 import Student from "./Components/Student";
+import "./Components/Regform.css";
+
 export default function App() {
   const [view, setView] = useState('grid')
   const [search, setSearch] = useState('')
